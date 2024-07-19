@@ -4,6 +4,8 @@ import ProductCard from './ProdCard';
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
+
+
 const baseAnimation = {
   initial: { y: 100, opacity: 0 },
   whileInView: { y: 0, opacity: 1 },
@@ -16,40 +18,28 @@ const baseAnimation = {
 };
 
 export default function BodyFirst() {
-  const [embroideryDresses, setEmbroideryDresses] = useState([]);
-  const [chiffonDresses, setChiffonDresses] = useState([]);
-  const [kurtiDresses, setKurtiDresses] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [EMBROIDERY, setSummerDresses] = useState([]);
+  const [CHIFFON, setWinterDresses] = useState([]);
+  const [kurti, setChiffonDresses] = useState([]);
 
   useEffect(() => {
     const getDresses = async () => {
       try {
-        const res = await axios.get('http://localhost:8000/?categories=ambroidery,chiffon,rafiaData');
-        const embroidery = res.data.filter(dress => dress.category === 'ambroidery');
-        const chiffon = res.data.filter(dress => dress.category === 'chiffon');
+        const res = await axios.get('impression-boutique.vercel.app/?categories=ambroidery,chiffon,rafiaData');
+        const EMBROIDERY = res.data.filter(dress => dress.category === 'ambroidery');
+        const CHIFFON = res.data.filter(dress => dress.category === 'chiffon');
         const kurti = res.data.filter(dress => dress.category === 'rafiaData');
 
-        setEmbroideryDresses(embroidery);
-        setChiffonDresses(chiffon);
-        setKurtiDresses(kurti);
-        setLoading(false);
+        setSummerDresses(EMBROIDERY);
+        setWinterDresses(CHIFFON);
+        setChiffonDresses(kurti);
       } catch (error) {
         console.log("Error: ", error);
-        setError("Failed to fetch data");
-        setLoading(false);
       }
     };
     getDresses();
   }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>{error}</div>;
-  }
+  // console.log(EMBROIDERY);
 
   return (
     <>
@@ -92,23 +82,30 @@ export default function BodyFirst() {
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">EMBROIDERY</h1>
 
       <div className="bg-white w-full md:p-8 z-10 lg:flex items-center justify-around">
-        {embroideryDresses.map((item) => (
+
+        {EMBROIDERY.map((item) => (
+
+
           <motion.div
             initial={baseAnimation.initial}
             whileInView={baseAnimation.whileInView}
             transition={{ ...baseAnimation.transition, delay: 0.2 }}
             key={item._id}>
-            <ProductCard imgSrc={item.imgUrl} productName={item.productName} price={item.price} />
+            <ProductCard  imgSrc={item.imgUrl} productName={item.productName} price={item.price} />
           </motion.div>
+          
         ))}
+        
       </div >
 
-      <div className="flex justify-center pb-10 font-custom-serif text-white"></div>
+      <div className="flex justify-center pb-10 font-custom-serif text-white">
+       
+      </div>
 
       <div className="border border-t-2 mb-10"></div>
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">CHIFFON</h1>
       <div className="bg-white w-full md:p-8 z-10 lg:flex items-center justify-around">
-        {chiffonDresses.map((item) => (
+        {CHIFFON.map((item) => (
           <motion.div
             initial={baseAnimation.initial}
             whileInView={baseAnimation.whileInView}
@@ -119,12 +116,14 @@ export default function BodyFirst() {
         ))}
       </div>
 
-      <div className="flex justify-center pb-10 font-custom-serif text-white"></div>
+      <div className="flex justify-center pb-10 font-custom-serif text-white">
+        
+      </div>
 
       <div className="border border-t-2 mb-10"></div>
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">Kurti</h1>
       <div className="bg-white w-full md:p-8 z-10 lg:flex items-center justify-around">
-        {kurtiDresses.map((item) => (
+        {kurti.map((item) => (
           <motion.div
             initial={baseAnimation.initial}
             whileInView={baseAnimation.whileInView}
