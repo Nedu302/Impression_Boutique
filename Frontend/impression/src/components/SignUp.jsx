@@ -18,7 +18,7 @@ const Signup = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:8000/components/SignUp", userInfo);
+      const res = await axios.post("impression-boutique.vercel.app/components/SignUp", userInfo);
       if (res.data) {
         toast.success("Successfully created!");
 
