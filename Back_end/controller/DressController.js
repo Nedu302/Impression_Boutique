@@ -2,20 +2,27 @@ import Dress from "../model/dressCollection.js";
 
 const getDress = async (req, res) => {
     try {
-        // Retrieve categories from query parameters
-        const categories = req.query.categories;
+        const { categories } = req.query;
 
-        if (!categories || !Array.isArray(categories)) {
-            return res.status(400).json({ message: "Categories query parameter is required and must be an array." });
+        if (!categories) {
+            return res.status(400).json({ message: "Categories query parameter is required." });
         }
 
-        // Ensure all categories are valid strings
-        if (categories.some(category => typeof category !== 'string' || category.trim().length === 0)) {
-            return res.status(400).json({ message: "Categories query parameter contains invalid values." });
+        // Parse JSON array if provided as a string
+        let categoriesArray;
+        try {
+            categoriesArray = JSON.parse(categories);
+        } catch (e) {
+            return res.status(400).json({ message: "Categories query parameter must be a valid JSON array." });
+        }
+
+        // Ensure categoriesArray is an array of strings
+        if (!Array.isArray(categoriesArray) || categoriesArray.some(category => typeof category !== 'string' || category.trim().length === 0)) {
+            return res.status(400).json({ message: "Categories query parameter must be a valid array of non-empty strings." });
         }
 
         // Trim and filter out any empty categories
-        const categoriesArray = categories.map(category => category.trim()).filter(category => category.length > 0);
+        categoriesArray = categoriesArray.map(category => category.trim()).filter(category => category.length > 0);
 
         // Check if categoriesArray is empty
         if (categoriesArray.length === 0) {
