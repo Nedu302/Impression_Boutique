@@ -28,7 +28,7 @@ export default function ShopProd() {
     useEffect(() => {
         const getShopDress = async () => {
             try {
-                const res = await axios.get('http://localhost:8000/?categories=ambroidery,chiffon,rafiaData,shopDress');
+                const res = await axios.get('impression-boutique.vercel.app/?categories=ambroidery,chiffon,rafiaData,shopDress');
                 console.log(res.data);
                 setShopDress(res.data);
                 setFilteredDress(res.data);
