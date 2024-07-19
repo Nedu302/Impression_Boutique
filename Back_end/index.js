@@ -9,11 +9,7 @@ import Contactrouter from "./route/Contact_us.js"
 dotenv.config();
 
 const app = express();
-app.use(cors({
-    origin:["https://impression-boutique-b3cv.vercel.app/"],
-    method:["GET","POST"],
-    credentials:true
-}));
+app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
