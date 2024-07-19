@@ -1,0 +1,55 @@
+
+  .marquee-container {
+    width: 97%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    z-index: 5;
+    padding: 10px 0;
+    color: white;
+}
+.object-shadow {
+    filter: drop-shadow(20px 8px 4px rgba(10, 10, 10, 0.1));
+  }
+  .text-transparent-border {
+    font-family: 'Arial', sans-serif; 
+    color: transparent;
+    /* background-image: linear-gradient(to right, transparent 50%, #fff 50%); */
+    background-clip: text;
+    /* -webkit-background-clip: text; */
+    -webkit-text-stroke:  1px #fff;
+    
+  }
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+    animation-delay: -15s;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.stand-container {
+  height: 100vh;
+  perspective: 1000px;
+}
+
+.stand {
+  transition: transform 0.5s ease;
+}
+
+.dress {
+  width: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
