@@ -18,24 +18,21 @@ const baseAnimation = {
 };
 
 export default function BodyFirst() {
-  const [embroidery, setEmbroidery] = useState([]);
-  const [chiffon, setChiffon] = useState([]);
-  const [kurti, setKurti] = useState([]);
+  const [EMBROIDERY, setSummerDresses] = useState([]);
+  const [CHIFFON, setWinterDresses] = useState([]);
+  const [kurti, setChiffonDresses] = useState([]);
 
   useEffect(() => {
     const getDresses = async () => {
-     try {const res = await axios.get('http://localhost:8000', {
-          params: { categories: JSON.stringify(['ambroidery', 'chiffon', 'rafiaData']) }
-       });
+      try {
+        const res = await axios.get('impression-boutique.vercel.app/?categories=ambroidery,chiffon,rafiaData');
+        const EMBROIDERY = res.data.filter(dress => dress.category === 'ambroidery');
+        const CHIFFON = res.data.filter(dress => dress.category === 'chiffon');
+        const kurti = res.data.filter(dress => dress.category === 'rafiaData');
 
-        // Categorize dresses based on the response
-        const embroideryDresses = res.data.filter(dress => dress.category === 'ambroidery');
-        const chiffonDresses = res.data.filter(dress => dress.category === 'chiffon');
-        const kurtiDresses = res.data.filter(dress => dress.category === 'rafiaData');
-
-        setEmbroidery(embroideryDresses);
-        setChiffon(chiffonDresses);
-        setKurti(kurtiDresses);
+        setSummerDresses(EMBROIDERY);
+        setWinterDresses(CHIFFON);
+        setChiffonDresses(kurti);
       } catch (error) {
         console.log("Error: ", error);
       }
