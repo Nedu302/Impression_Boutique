@@ -15,7 +15,7 @@ export default function LogIn() {
       email:data.email,
       password:data.password,
     };
-     await axios.post("http://localhost:8000/components/LogIn",userInfo)
+     await axios.post("impression-boutique.vercel.app/components/LogIn",userInfo)
     .then((res)=>{
       if(res.data)
       {
