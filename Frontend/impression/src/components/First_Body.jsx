@@ -25,7 +25,7 @@ export default function BodyFirst() {
   useEffect(() => {
     const getDresses = async () => {
       try {
-        const res = await axios.get('impression-boutique.vercel.app/?categories=ambroidery,chiffon,rafiaData');
+          const res = await axios.get('https://impression-boutique.vercel.app/?categories=ambroidery,chiffon,rafiaData');
         const EMBROIDERY = res.data.filter(dress => dress.category === 'ambroidery');
         const CHIFFON = res.data.filter(dress => dress.category === 'chiffon');
         const kurti = res.data.filter(dress => dress.category === 'rafiaData');
