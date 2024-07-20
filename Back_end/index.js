@@ -14,8 +14,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001;
-const URI = process.env.MongoDBURL;
+const PORT = 8000 || 3001;
+const URI = "mongodb+srv://naveedahmad6028:xw4lyjllo3hhGHGr@cluster0.rp3ffvb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 // Log the MongoDB connection string for debugging
 console.log("MongoDB Connection String:", URI);
