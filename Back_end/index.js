@@ -23,7 +23,7 @@ mongoose.connect(URI)
     .then(() => console.log("Connected to MongoDB"))
     .catch(error => console.log("Error: ", error));
 
-app.use("https://impression-boutique.vercel.app/?categories=ambroidery", dressRoute);
+app.use("/", dressRoute);
 app.use("/components/ShopProd", ShopDressRouter);
 app.use("/components/",router)
 app.use("/components/",Contactrouter);
