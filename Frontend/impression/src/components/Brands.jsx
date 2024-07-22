@@ -143,7 +143,7 @@ export default function Brands() {
                 </div>
 
 
-                <div data-v-b0ccb2e2="" id="B" class="component--brand-list-body-brand-group text-gray-400">
+                <div data-v-b0ccb2e2="" id="B" class="component--brand-list-body-brand-group text-slate-500">
 
                     <ul data-v-b0ccb2e2="" class="brand-list"><li data-v-b0ccb2e2="" class="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/babynest-boutique" class="ml-10 flex w-full  pb-6"><span data-v-b0ccb2e2="" class="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
                         Babynest Boutique
