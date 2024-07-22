@@ -42,19 +42,19 @@ const SlowScrollImage = () => {
 
   return (
     <>
-      <div  className="  absolute z-20 top-80 md:top-20 md:left-1/3  md:text-6xl  stroke-black font-font-bold">
-        <p className='text-transparent-border text-5xl md:text-7xl '>IMPRESSION</p>
-        <span className='text-red-600 text-2xl md:text-5xl md:ml-28'> BOUTIQUE</span>
+      <div  className="  absolute z-20 top-80 md:top-20 ml-5  md:left-1/3  md:text-6xl  stroke-black font-font-bold">
+        <p className='text-transparent-border text-4xl md:text-7xl '>IMPRESSION</p>
+        <span className='text-red-600 text-xl md:text-5xl md:ml-28'> BOUTIQUE</span>
       </div>
       <div className="marquee-container flex ">
         <div className="marquee text-7xl md:text-9xl">
           <p>Curated Collections of Quality, Trendy Apparel Tailored For Your Everyday Style.</p>
         </div>
       </div>
-      <div className="relative mt-20">
-        <div className="lg:flex bg-slate-300 flex-wrap">
+
+      <div className=" mt-20 md:flex bg-slate-300 ">
        
-          <div className="w-full lg:w-1/2 relative overflow-hidden">
+          <div className="w-full lg:w-1/2  overflow-hidden">
             <motion.img
               ref={firstImageRef}
               initial={baseAnimation.initial}
@@ -78,10 +78,11 @@ const SlowScrollImage = () => {
               style={{ display: 'block', willChange: 'transform' }}
             />
           </div>
+
          
-         
-        </div>
+
       </div>
+
     </>
   );
 };
