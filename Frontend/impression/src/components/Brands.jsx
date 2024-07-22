@@ -27,13 +27,13 @@ export default function Brands() {
 
             </motion.div>
 
-            <motion.div className=' flex justify-center mt-10 pb-32 min-w-[420px] md:w-full'
+            <motion.div className=' flex justify-center mt-10 pb-32   min-w-[420px] md:w-full'
                 initial={baseAnimation.initial}
                 whileInView={baseAnimation.whileInView}
                 transition={{ ...baseAnimation.transition, delay: 0.5 }}
             >
 
-                <div data-v-b0ccb2e2="" id="A" className="component--brand-list-body-brand-group   flex text-gray-400  border-r  border-r-gray-400"> 
+                <div data-v-b0ccb2e2="" id="A" className="component--brand-list-body-brand-group   flex  text-slate-500  border-r  border-r-gray-400"> 
                     <ul data-v-b0ccb2e2="" className="brand-list">
                     <li data-v-b0ccb2e2="" className="flex w-full">
                     <div data-v-b0ccb2e2="" className="brand-initial-group-header-container">
