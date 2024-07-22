@@ -23,10 +23,13 @@ mongoose.connect(URI)
     .then(() => console.log("Connected to MongoDB"))
     .catch(error => console.log("Error: ", error));
 
-app.use("/", dressRoute);
-app.use("/components/ShopProd", ShopDressRouter);
-app.use("/components/",router)
-app.use("/components/",Contactrouter);
+app.use("/", (req,res)=>
+    {
+        res.json("Ellow");
+    });
+//app.use("/components/ShopProd", ShopDressRouter);
+//app.use("/components/",router)
+//app.use("/components/",Contactrouter);
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
