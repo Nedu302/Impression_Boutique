@@ -81,7 +81,7 @@ export default function BodyFirst() {
 
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">EMBROIDERY</h1>
 
-      <div className="bg-white w-full md:p-8 z-10 flex flex-wrap items-center justify-around">
+      <div className="bg-white w-full md:p-8 z-10 lg:flex  items-center justify-around">
 
         {EMBROIDERY.map((item) => (
 
@@ -104,7 +104,7 @@ export default function BodyFirst() {
 
       <div className="border border-t-2 mb-10"></div>
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">CHIFFON</h1>
-      <div className="bg-white w-full md:p-8 z-10 flex flex-wrap items-center justify-around">
+      <div className="bg-white w-full md:p-8 z-10 lg:flex items-center justify-around">
         {CHIFFON.map((item) => (
           <motion.div
             initial={baseAnimation.initial}
@@ -122,7 +122,7 @@ export default function BodyFirst() {
 
       <div className="border border-t-2 mb-10"></div>
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">Kurti</h1>
-      <div className="bg-white w-full md:p-8 z-10 flex flex-wrap items-center justify-around">
+      <div className="bg-white w-full md:p-8 z-10 lg:flex items-center justify-around">
         {kurti.map((item) => (
           <motion.div
             initial={baseAnimation.initial}
