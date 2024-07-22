@@ -42,38 +42,38 @@ const SlowScrollImage = () => {
 
   return (
     <>
-      <div  className="  absolute z-20 top-80 md:top-20 ml-5  md:left-1/3  md:text-6xl  stroke-black font-font-bold">
+      <div  className=" absolute z-20 top-80 md:top-20 ml-5  md:left-1/3  md:text-6xl  stroke-black font-font-bold">
         <p className='text-transparent-border text-4xl md:text-7xl '>IMPRESSION</p>
         <span className='text-red-600 text-xl md:text-5xl md:ml-28'> BOUTIQUE</span>
       </div>
-      <div className="marquee-container flex ">
+      <div className="marquee-container flex min-w-[420px] md:w-full">
         <div className="marquee text-7xl md:text-9xl">
           <p>Curated Collections of Quality, Trendy Apparel Tailored For Your Everyday Style.</p>
         </div>
       </div>
 
-      <div className=" mt-20 md:flex bg-slate-300 ">
+      <div className="mt-20 md:flex bg-slate-300 w-full  min-w-[420px] md:w-full ">
        
-          <div className="w-full lg:w-1/2  overflow-hidden">
+          <div className=" lg:w-1/2  overflow-hidden">
             <motion.img
               ref={firstImageRef}
               initial={baseAnimation.initial}
               whileInView={baseAnimation.whileInView}
               transition={{ ...baseAnimation.transition, delay: 0.8 }}
               src="animationPic.png"
-              className="w-full z-5 transition-transform object-shadow duration-500 ease-out"
+              className=" z-5 transition-transform object-shadow duration-500 ease-out"
               alt="Slow Scrolling Image"
               style={{ display: 'block', willChange: 'transform' }}
             />
           </div>
-          <div className="w-full lg:w-1/2 relative overflow-hidden">
+          <div className=" lg:w-1/2 relative overflow-hidden">
             <motion.img
                ref={stand3Ref}
               initial={baseAnimation.initial}
               whileInView={baseAnimation.whileInView}
               transition={{ ...baseAnimation.transition, delay: 0.8 }}
                src="standPic2.png"
-              className="w-full z-5 transition-transform object-shadow duration-500 ease-out"
+              className=" z-5 transition-transform object-shadow duration-500 ease-out"
               alt="Slow Scrolling Image"
               style={{ display: 'block', willChange: 'transform' }}
             />
