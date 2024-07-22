@@ -3,42 +3,46 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const baseAnimation = {
-    initial: { x: 0, opacity: 0 },
-    whileInView: { x: 100, opacity: 1 },
+    initial: { y: 0, opacity: 0 },
+    whileInView: { y: 100, opacity: 1 },
     transition: {
-        x: { type: 'spring', stiffness: 60 },
+        y: { type: 'spring', stiffness: 60, duration: 1 }, // Adjust duration if needed
         opacity: { duration: 3 },
-        ease: 'easeIn',
-        duration: 10,
+        ease: 'easeIn', // Apply ease globally or adjust as needed
     },
 };
+
 export default function Brands() {
 
 
     return (
         <>
-            <motion.div className='mt-32'
+            <div className=" bg-gradient-to-r from-slate-200 via-gray-50 to-slate-200">
+
+            <motion.div className=' flex justify-center md:justify-start'
                 initial={baseAnimation.initial}
                 whileInView={baseAnimation.whileInView}
                 transition={{ ...baseAnimation.transition, delay: 0.7 }}>
-                <span data-v-b0ccb2e2="" className="font-inter m-20  font-semibold  text-dark text-4xl font-font-bold text-gray-400 font-custom-serif">All Brands:</span>
+                <span data-v-b0ccb2e2="" className="font-inter md:m-20  font-semibold  text-dark text-4xl font-font-bold text-slate-500 font-custom-serif">All Brands</span>
 
             </motion.div>
-            <motion.div className=' flex mt-20 justify-center'
+
+            <motion.div className=' flex justify-center mt-10 pb-32 min-w-[420px] md:w-full'
                 initial={baseAnimation.initial}
                 whileInView={baseAnimation.whileInView}
-                transition={{ ...baseAnimation.transition, delay: 0.7 }}
+                transition={{ ...baseAnimation.transition, delay: 0.5 }}
             >
 
-                <div data-v-b0ccb2e2="" id="A" className="component--brand-list-body-brand-group w-96  flex text-gray-400  border-r  border-r-gray-400"> <ul data-v-b0ccb2e2="" className="brand-list"><li data-v-b0ccb2e2="" className="flex w-full">
+                <div data-v-b0ccb2e2="" id="A" className="component--brand-list-body-brand-group   flex text-gray-400  border-r  border-r-gray-400"> 
+                    <ul data-v-b0ccb2e2="" className="brand-list">
+                    <li data-v-b0ccb2e2="" className="flex w-full">
                     <div data-v-b0ccb2e2="" className="brand-initial-group-header-container">
-                        <div data-v-b0ccb2e2="" className="brand-initial-group-header">
-
-                        </div>
+                        <div data-v-b0ccb2e2="" className="brand-initial-group-header"></div>
                     </div>
 
                 </li>
-                    <li data-v-b0ccb2e2="" className="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/alee-malic" className="ml-10 flex w-full  pb-6"><span data-v-b0ccb2e2="" className="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
+                    <li data-v-b0ccb2e2="" className="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/alee-malic" className="ml-10 flex w-full  pb-6">
+                    <span data-v-b0ccb2e2="" className="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
                         ALEE MALIC
                     </span></Link></li><li data-v-b0ccb2e2="" className="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/ar-apparel" className="ml-20 flex w-full border-l-0 border-r-0 border-solid border-borderColor2 pb-6"><span data-v-b0ccb2e2="" className="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
                         AR Apparel
@@ -66,8 +70,8 @@ export default function Brands() {
                     </li>
                     <li data-v-b0ccb2e2="" className="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/abbas-jamil-rajpoot" className="ml-10 flex w-full  pb-6"><span data-v-b0ccb2e2="" className="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
                         Abbas Jamil Rajpoot
-                    </span></Link></li><li data-v-b0ccb2e2="" className="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/abdullah-amin-by-muraqsh" className="ml-20 flex w-full border-l-0 border-r-0 border-solid border-borderColor2 pb-6"><span data-v-b0ccb2e2="" className="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
-                        Abdullah Amin By Muraqsh
+                    </span></Link></li><li data-v-b0ccb2e2="" className="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/abdullah-amin" className="ml-20 flex w-full border-l-0 border-r-0 border-solid border-borderColor2 pb-6"><span data-v-b0ccb2e2="" className="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
+                        Abdullah Amin
                     </span></Link></li><li data-v-b0ccb2e2="" className="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/abeeha-mishcah" className="ml-10 flex w-full  pb-6"><span data-v-b0ccb2e2="" className="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
                         Abeeha Mishcah
                     </span></Link></li><li data-v-b0ccb2e2="" className="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/abeera-usman" className="ml-20 flex w-full border-l-0 border-r-0 border-solid border-borderColor2 pb-6"><span data-v-b0ccb2e2="" className="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
@@ -135,12 +139,11 @@ export default function Brands() {
                         Alazffum
                     </span></Link></li>
 
-
-
-
                 </ul>
                 </div>
-                <div data-v-b0ccb2e2="" id="B" class="component--brand-list-body-brand-group md:ml-20 w-96 text-gray-400">
+
+
+                <div data-v-b0ccb2e2="" id="B" class="component--brand-list-body-brand-group text-gray-400">
 
                     <ul data-v-b0ccb2e2="" class="brand-list"><li data-v-b0ccb2e2="" class="flex w-full"><Link data-v-b0ccb2e2="" to="/brands/babynest-boutique" class="ml-10 flex w-full  pb-6"><span data-v-b0ccb2e2="" class="font-inter text-base font-normal leading-6 text-dark transition duration-100 ease-in hover:text-dark md:text-mediumGray">
                         Babynest Boutique
@@ -235,6 +238,8 @@ export default function Brands() {
                     </span></Link></li></ul>
                 </div>
             </motion.div>
+            </div>
+
         </>
     )
 }
