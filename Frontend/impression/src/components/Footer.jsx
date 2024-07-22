@@ -13,8 +13,8 @@ export default function fotter() {
       <h3>Subscribe for Updates & Special Offers</h3>
     </div>
 
-    <div className='sContent w-72 md:w-96  flex justify-between items-center text-xl mb-20'>
-      <input className=' border-b-2 rounded-none border-gray-500   focus:outline-none  bg-transparent  text-gray-500' type="email" name="" aria-label='Email' placeholder="Email" id="" />
+    <div className='sContent w-72 md:w-96  flex flex-wrap justify-between items-center text-xl mb-20'>
+      <input className=' border-b-2 rounded-none border-gray-500  focus:outline-none  bg-transparent  text-gray-500' type="email" name="" aria-label='Email' placeholder="Email" id="" />
       <Link to="/" htmlFor="Email">Subscribe</Link> 
     </div >
         
@@ -40,7 +40,7 @@ export default function fotter() {
         <Link><CiYoutube /></Link>
       </div>
     </div>
-    <div className=' text-lg mb-20'>
+    <div className=' text-lg mb-3'>
       <h1>© impression.pk</h1>
 
       </div>
