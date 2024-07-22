@@ -25,7 +25,7 @@ export default function BodyFirst() {
   useEffect(() => {
     const getDresses = async () => {
       try {
-          const res = await axios.get('https://impression-boutique.vercel.app/?categories=ambroidery,chiffon,rafiaData');
+        const res = await axios.get('https://impression-boutique.vercel.app/?categories=ambroidery,chiffon,rafiaData');
         const EMBROIDERY = res.data.filter(dress => dress.category === 'ambroidery');
         const CHIFFON = res.data.filter(dress => dress.category === 'chiffon');
         const kurti = res.data.filter(dress => dress.category === 'rafiaData');
@@ -43,7 +43,7 @@ export default function BodyFirst() {
 
   return (
     <>
-      <div className="bg-white w-full p-8 z-10 flex items-center justify-around" style={{ height: '100%' }}>
+      <div className="bg-white  p-8 z-10 flex items-center justify-around min-w-[420px] md:w-full" style={{ height: '100%' }}>
         <div className="w-40 md:w-96">
           <motion.img
             initial={{ x: -100, opacity: 0 }}
@@ -81,7 +81,7 @@ export default function BodyFirst() {
 
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">EMBROIDERY</h1>
 
-      <div className="bg-white w-full md:p-8 z-10 lg:flex  items-center justify-around">
+      <div className=" min-w-[400px] md:w-full md:p-8 z-10 flex flex-wrap items-center justify-around">
 
         {EMBROIDERY.map((item) => (
 
@@ -104,7 +104,7 @@ export default function BodyFirst() {
 
       <div className="border border-t-2 mb-10"></div>
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">CHIFFON</h1>
-      <div className="bg-white w-full md:p-8 z-10 lg:flex items-center justify-around">
+      <div className="bg-white w-full md:p-8 flex flex-wrap z-10  items-center justify-around min-w-[400px] md:w-full">
         {CHIFFON.map((item) => (
           <motion.div
             initial={baseAnimation.initial}
@@ -122,7 +122,7 @@ export default function BodyFirst() {
 
       <div className="border border-t-2 mb-10"></div>
       <h1 className="md:pl-20 pl-10 md:text-5xl text-3xl font-custom-serif">Kurti</h1>
-      <div className="bg-white w-full md:p-8 z-10 lg:flex items-center justify-around">
+      <div className="bg-white w-full md:p-8 z-10 flex flex-wrap items-center justify-around min-w-[420px] md:w-full">
         {kurti.map((item) => (
           <motion.div
             initial={baseAnimation.initial}
@@ -136,7 +136,7 @@ export default function BodyFirst() {
 
       <div className="border border-t-2 mb-10"></div>
 
-      <div className="About flex space-x-2 text-gray-500 h-1/2 flex-col justify-center items-center m-10 md:m-56 font-custom-serif text-center">
+      <div className="About min-w-[300px]  flex space-x-2 text-gray-500  flex-col justify-center items-center m-10  font-custom-serif text-center">
         <motion.h1
           initial={baseAnimation.initial}
           whileInView={baseAnimation.whileInView}
@@ -147,8 +147,8 @@ export default function BodyFirst() {
         <motion.h2
           initial={baseAnimation.initial}
           whileInView={baseAnimation.whileInView}
-          transition={{ ...baseAnimation.transition, delay: 0.2 }}
-          className="md:text-lg flex texmd font-200">
+          transition={{ ...baseAnimation.transition, delay: 0.2 }}  
+          className="md:text-lg flex texmd font-200 ">
           IMPRESSION BOUTIQUE- is a brand that has made its mark with its blend of classical and modern cuts, vibrant colors, eye-catching intricate details, dazzling embellishments, and luxurious premium-quality fabric! Shireen Lakdawala has emerged as your go-to brand, your savior for every occasion. With the wide variety of carefully curated collections of ensembles, IMPRESSION BOUTIQUE has a trick up her sleeve that leaves you looking effortlessly chic, and gorgeous and makes your style statement shine!
           The Pakistani traditional motifs and designs have always had a huge fan base around the globe. South Asian couture has a flair for dramatic details.
         </motion.h2>
