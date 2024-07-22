@@ -7,13 +7,13 @@ import { CiYoutube } from "react-icons/ci";
 
 export default function fotter() {
   return (
-  <div className=" font-custom-serif bg-slate-200 text-gray-500 z-300  flex flex-col items-center justify-evenly text-lg pt-20 pb-2">
+  <div className=" font-custom-serif bg-slate-200 text-gray-500 z-300  flex flex-col items-center justify-evenly text-lg pt-20 pb-2  min-w-[420px] md:w-full">
     <div className='fContent flex flex-col items-center mb-14'>
       <span className=' text-3xl pb-4'>Stay Comfy</span>
-      <h3>Subscribe for Updates & Special Offers</h3>
+      <h3 className=' text-center'>Subscribe for Updates & Special Offers</h3>
     </div>
 
-    <div className='sContent w-72 md:w-96  flex flex-wrap justify-between items-center text-xl mb-20'>
+    <div className='sContent w-72 md:w-96  flex flex-col justify-between items-center text-xl mb-20'>
       <input className=' border-b-2 rounded-none border-gray-500  focus:outline-none  bg-transparent  text-gray-500' type="email" name="" aria-label='Email' placeholder="Email" id="" />
       <Link to="/" htmlFor="Email">Subscribe</Link> 
     </div >
