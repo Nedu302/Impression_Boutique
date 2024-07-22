@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin: 'https://impression-boutique-b3cv.vercel.app/',
+    origin: 'http://impression-boutique-b3cv.vercel.app/',
     methods: 'GET,HEAD,PUT,POST',
     credentials: true
 }));
