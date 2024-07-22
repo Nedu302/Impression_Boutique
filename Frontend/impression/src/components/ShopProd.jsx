@@ -64,14 +64,14 @@ export default function ShopProd() {
 
     return (
         <>
-            <div className='min-h-screen'>
+            <div className='min-h-screen min-w-[420px] md:w-full'>
                 <motion.div className='Collection_div mt-32 flex flex-col items-center font-custom-serif text-gray-400 mb-16'
                     initial={baseAnimation.initial}
                     whileInView={baseAnimation.whileInView}
                     transition={{ ...baseAnimation.transition, delay: 0.5 }}
                 >
-                    <span className='text-4xl mb-2'>Shop Our Collection</span>
-                    <h1 className='w-1/2 text-center'>
+                    <span className='text-4xl'>Shop Our Collection</span>
+                    <h1 className=' m-10 md:w-1/2 text-center'>
                         Welcome to our exclusive collection, where style meets quality and every piece is crafted to perfection.
                         Discover a curated selection of the finest products designed to elevate your wardrobe and enhance your lifestyle.
                         Whether you're searching for timeless classics or the latest trends, our collection has something for everyone.
@@ -84,7 +84,7 @@ export default function ShopProd() {
                         transition={{ ...baseAnimation.transition, delay: 0.2 }}
                     >
                         {/* Filter Section */}
-                        <div className='pt-16 text-gray-400 text-lg md:w-60 space-y-4 space-x-7'>
+                        <div className=' text-gray-400 text-lg md:w-60 space-y-4 space-x-7'>
                             <h2 className='font-semibold mb-4 text-2xl'>Filter by</h2>
                             <div className='border-b text-gray-400'></div>
                             <div className='mb-4 mt-3 flex-col cursor-pointer'>
@@ -129,10 +129,10 @@ export default function ShopProd() {
                             <div className='border-b text-gray-400'></div>
                         </div>
                     </motion.div>
-                    <div className="bg-white w-full md:p-8 z-10 flex-wrap lg:flex items-center justify-around">
+                    <div className=" bg-white w-full md:p-4 flex flex-wrap z-10  items-center justify-around min-w-[400px] md:w-full">
                         {filteredDress.map((item) => (
                             <motion.div
-                                className='w-1/3'
+                                className=''
                                 initial={baseAnimation.initial}
                                 whileInView={baseAnimation.whileInView}
                                 transition={{ ...baseAnimation.transition, delay: 0.2 }}
