@@ -58,38 +58,38 @@ export default function Contact_us() {
   }, []);
 
   return (
-    <div className="bg-white pt-20">
+    <div className="bg-white pt-20 min-w-[420px] md:w-full">
       <ToastContainer />
       <div className="text-center font-custom-serif p-7">
-        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-500 sm:text-4xl">
           Get In Touch
         </p>
-        <p className="mt-4 max-w-2xl text-gray-500 lg:mx-auto text-md">
+        <p className="mt-4 max-w-2xl text-slate-400 lg:mx-auto text-md">
           We'd love to hear from you. Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions.
         </p>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 rounded-md lg:px-8 bg-gradient-to-r from-gray-200 to-gray-50 py-12 mb-20">
-        <div className="mt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6  lg:px-8 bg-gradient-to-r from-gray-200  py-12 mb-20">
+        <div className="">
           <div className="flex flex-col md:flex-row md:space-x-8">
-            <div className="md:w-1/2 p-14">
+            <div className="md:w-1/2 md:p-14 ">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
                 <div>
                   <label htmlFor="name" className="sr-only">Name</label>
-                  <input type="text" {...register('name', { required: true })} name="name" id="name" className="block w-full h-14 px-4 py-2 sm:text-sm bg-transparent border border-sky-900 focus:outline-none" placeholder="Your Name" />
+                  <input type="text" {...register('name', { required: true })} name="name" id="name" className="block w-full h-14 px-4 py-2 sm:text-sm bg-transparent border border-sky-900 rounded-none focus:outline-none" placeholder="Your Name" />
                   {errors.name && (<span className="error-message text-sm text-red-500">Name is required</span>)}
                 </div>
                 <div>
                   <label htmlFor="email" className="sr-only">Email</label>
-                  <input type="email" {...register('email', { required: true })} name="email" id="email" className="block w-full h-14 px-4 py-2 sm:text-sm bg-transparent border border-sky-900 focus:outline-none" placeholder="Your Email" />
+                  <input type="email" {...register('email', { required: true })} name="email" id="email" className="block w-full h-14 px-4 py-2 sm:text-sm bg-transparent border border-sky-900 rounded-none focus:outline-none" placeholder="Your Email" />
                   {errors.email && (<span className="error-message text-sm text-red-500">Email is required</span>)}
                 </div>
                 <div>
                   <label htmlFor="message" className="sr-only">Message</label>
-                  <textarea name="message" {...register('message', { required: true })} id="message" rows="4" className="block w-full px-4 py-10 sm:text-sm bg-transparent border border-sky-900 focus:outline-none" placeholder="Your Message"></textarea>
+                  <textarea name="message" {...register('message', { required: true })} id="message" rows="4" className="block w-full px-4 py-10 sm:text-sm bg-transparent border border-sky-900 rounded-none focus:outline-none" placeholder="Your Message"></textarea>
                   {errors.message && (<span className="error-message text-sm text-red-500">Message is required</span>)}
                 </div>
                 <div>
-                  <button type="submit" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium shadow-sm text-white bg-slate-600 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:bg-slate-600">
+                  <button type="submit" className="inline-flex items-center justify-center px-6 py-3 mb-4 md:mb-0 border border-transparent text-base font-medium shadow-sm text-white bg-slate-600 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:bg-slate-600">
                     Send Message
                   </button>
                 </div>
@@ -102,6 +102,7 @@ export default function Contact_us() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
