@@ -103,6 +103,5 @@ export default function Contact_us() {
         </div>
       </div>
     </div>
-    </div>
   );
 }
