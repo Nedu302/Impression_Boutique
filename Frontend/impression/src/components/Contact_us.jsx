@@ -19,7 +19,7 @@ export default function Contact_us() {
     };
 
     try {
-      const res = await axios.post("impression-boutique.vercel.app/components/Contact_us", UserMessage);
+      const res = await axios.post("https://impression-boutique.vercel.app/components/Contact_us", UserMessage);
       console.log('Server response:', res);
 
       if ( res.data) {
